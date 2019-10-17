@@ -38,9 +38,9 @@ class MyCustomMigration implements Migration, ExtendExtensionAwareInterface
     public function up(Schema $schema, QueryBag $queries)
     {
             /** 
-			* Table of the entity to add custom property
-			* In this case we add attibute on Oro\Bundle\ProductBundle\Entity\Product entity
-			**/
+	    * Table of the entity to add custom property
+            * In this case we add attibute on Oro\Bundle\ProductBundle\Entity\Product entity
+	    **/
             $tableName = $this->extendExtension->getTableNameByEntityClass(Product::class);
             /** Create translatable field/column */
             $targetTableName = $this->extendExtension->getTableNameByEntityClass(LocalizedFallbackValue::class);
