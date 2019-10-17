@@ -79,7 +79,7 @@ class MyCustomMigration implements Migration, ExtendExtensionAwareInterface
 }
 ```
 
-##### 1. Add custom for guesser to add right form type on managment console
+##### 2. Add custom for guesser to add right form type on managment console
 If you try to add new property on another entity than Oro\Bundle\ProductBundle\Entity\Product (ex custom entity created using CRUD) the edit form show the property as association. But we want to edit this property like a translatable field (with translate icon ![](https://camo.githubusercontent.com/cda5d2862e4267b7528322ff37a19ccc63591dc4/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f3831313139392f323034383336362f61646335376563652d386134332d313165332d393865612d3031636462613764366136662e706e67))
 For this we have to create a custom form guesser like this
 
@@ -153,3 +153,5 @@ services:
     tags:
       - { name: form.type_guesser, priority: 25 }
 ```
+
+##### 3. Run oro:platform:update command
